@@ -1,0 +1,305 @@
+/*css初始化*/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; }
+h1, h2, h3, h4, h5, h6{ font-size:100%; }
+address, cite, dfn, em, var { font-style:normal; }
+code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
+small{ font-size:12px; }
+ul, ol { list-style:none; }
+a { text-decoration:none; }
+a:hover { text-decoration:underline; }
+sup { vertical-align:text-top; }
+sub{ vertical-align:text-bottom; }
+legend { color:#000; }
+fieldset, img { border:0; }
+button, input, select, textarea { font-size:100%; }
+table { border-collapse:collapse; border-spacing:0; }
+/*初始化结束*/
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+/*共用样式开始*/
+ul.nav li{
+  margin: 5px 20px;
+  display: inline-block;
+}
+.slider_controls{
+  height: 0px;
+}
+/*共用样式结束*/
+/*动画效果开始*/
+@keyframes disappear{
+  0% {opacity: 1;}
+  100%{opacity: 0;}
+}
+@keyframes appear{
+  0% {opacity: 0;}
+  100%{opacity: 1;}
+}
+/*动画效果结束*/
+/*顶部样式开始*/
+nav{
+  background-color: rgb(29, 29, 29);
+  padding: 0 100px;
+  top: 0px;
+  height: 50px;
+  width: 100%;
+}
+nav ul li{
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+}
+nav div,nav ul{
+  display: inline-block;
+  height: 50px;
+  vertical-align: top;
+}
+#date{
+  margin-right:200px; 
+  float: right;
+  line-height: 50px;
+  color: rgb(143, 143, 143);
+}
+/*顶部样式结束*/
+
+/*头部滚动图开始*/
+#header-wrap{
+  background-color: black;
+}
+#viewbox{
+  margin: 0 auto;
+  height: 500px;
+  width: 800px;
+}
+a.prev{
+  left: 15%;
+  background-image: url('../images/prev.jpg');
+}
+a.head_icon{
+  position: absolute;
+  top: 30%;
+  display: inline-block;
+  height: 130px;
+  width: 80px;
+  text-align: left;
+}
+a.next{
+  right: 15%;
+  background-image: url('../images/next.jpg');
+}
+a.head_icon:hover{
+  transform: scale(1.1);
+}
+#viewbox img{
+  display: none;
+}
+#viewbox img:first-child{
+  display: block;
+  animation: disappear 2s;
+}
+/*头部滚动图结束*/
+
+/*主题开始*/
+section{
+  width: 900px;
+  margin: 0 auto;
+}
+#note{
+  margin: 0 auto;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+#note p{
+  text-align: left;
+  width: 800px;
+  display: inline-block;
+  background-color: orange;
+  font-size: 18px;
+  border-radius: 20px;
+  padding-left:50px;
+}
+#note img{
+  position: relative;
+  left: 40px;
+  top: 5px;
+}
+
+.left-side{
+  float: left;
+  background-color: cornflowerblue;
+  width: 80%;
+}
+.left-side a{
+  display: inline-block;
+  color: gray;
+  font-size: 20px;
+  height: 100%;
+}
+#nav-news{
+  padding: 10px;
+}
+
+.imgbox{
+  text-align: center;
+  padding:5px 0; 
+  margin: 5px 0 5px 10px;
+  display: inline-block;
+  background-color: white;
+  height: 240px;
+  width: 210px;
+}
+.imgbox p{
+  margin: 10px 0;
+  height: 16px;
+  font-size: 16px;
+  line-height: 16px;
+}
+.slider_controls{
+  padding-left: 670px;
+}
+a.news_icon{
+  position: relative;
+  bottom: 180px;
+  margin: 10px 0;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+a.top{
+  background-image: url(../images/top.jpg);
+}
+a.bottom{
+  background-image: url(../images/bottom.jpg);
+}
+#news-detail{
+  padding-right:60px; 
+}
+#news-detail li{
+  display: inline-block;
+  width: 310px;
+  margin: 5px 10px;
+}
+#news-detail li a{
+  width: 100%;
+  font-size: 14px;
+  color: black;
+}
+
+#movies-images .imgbox p{
+  text-indent: 10px;
+  text-align: left;
+  font-size: 20px;
+}
+#movies-images .slider_controls .news_icon{
+  bottom: 320px;
+}
+.thr-list li{
+  margin: 5px 0;
+}
+.thr-list li p{
+  display: inline-block;
+  margin: 0 20px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+}
+.thr-list li a{
+  margin-left:50px; 
+  color: black;
+  background-color: gray;
+  height: 30px;
+  width: 80px;
+  text-align: center;
+}
+.thr-title{
+  width:300px;
+}
+.thr-size{
+  width:150px;
+}
+#softs .slider_controls .news_icon{
+  bottom: 200px;
+}
+.right-side{
+  float: right;
+  background-color: orangered;
+  width: 20%;
+}
+#nav-head{
+  height: 40px;
+  line-height: 40px;
+  margin:56px 0 10px 0;
+  background-color: orange;
+  padding: 0 10px;
+}
+#nav-head h1{
+  display: inline-block;
+  font-size: 20px;
+}
+#nav-head a{
+  float: right;
+  height: 40px;
+}
+#nav-detail{
+  background-color: royalblue;
+}
+#nav-detail ul li{
+  display: inline-block;
+  margin: 5px 5%;
+  width: 40%;
+  height: 20px;
+}
+#team-notice{
+  padding: 10px 0;
+}
+#team-notice h1{
+  font-size: 20px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+}
+#team-notice li{
+  padding:5px 10px;
+  
+}
+#ad a{
+  display: inline-block;
+}
+footer{
+  background-color: slateblue;
+  clear: both;
+}
+footer>div{
+  display: inline-block;
+  margin: 20px;
+  height: 120px;
+  vertical-align: top;
+}
+footer h1{
+  font-size: 20px;
+}
+#footer-logo{
+  width: 120px;
+  margin-left:10%; 
+}
+#footer-intro{
+  width: 500px;
+}
+#footer-intro p{
+  margin:20px 0;
+}
+#footer-intro li{
+  margin:0 5px;
+}
+#extension li{
+  display: inline-block;
+}
+#footer-contact p,#footer-contact h1{
+  margin: 10px 0;
+}

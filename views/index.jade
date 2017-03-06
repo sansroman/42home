@@ -1,0 +1,231 @@
+extend layout
+block nav
+  nav
+    div
+        img(src='./images/bmzr.jpg')
+    ul.nav
+        li
+          a 校内导航
+        li
+          a 新闻社区
+        li
+          a 新媒体中心
+        li
+          a 淘淘
+        li
+          a 更多
+          span
+    #date
+        p= date
+block content
+  #header-wrap
+    #viewbox
+      img.img-list(src="./images/pic1.jpg")
+      img.img-list(src="./images/pic2.jpg")
+      img.img-list(src="./images/pic3.jpg")
+      .slider-controls
+        a.prev.head_icon
+        a.next.head_icon
+  section
+    #note
+      img(src="./images/heart.jpg")
+      p= note
+    .content.left-side
+      #news-content
+        #nav-news
+          ul.nav
+            //- 这里可以改成遍历
+            li
+              a(src=news_src1)= news_srctext1
+            li
+              a(src=news_src2)= news_srctext2
+            li
+              a(src=news_src3)= news_srctext3
+            li
+              a(src=news_src4)= news_srctext4
+        #news-images.images
+          .imgbox
+            img(src=news_img1)
+            p= news_imgtext1
+          .imgbox
+            img(src=news_img2)
+            p= news_imgtext2
+          .imgbox
+            img(src=news_img3)
+            p= news_imgtext3
+          .slider_controls
+            a.top.news_icon
+            a.bottom.news_icon
+        #news-detail
+          //- 这里可以改成遍历
+          ul
+            li
+              a(src=news_detail1)= news_detailtext1
+            li
+              a(src=news_detail2)= news_detailtext2
+            li
+              a(src=news_detail3)= news_detailtext3
+            li
+              a(src=news_detail4)= news_detailtext4
+            li
+              a(src=news_detail5)= news_detailtext5
+            li
+              a(src=news_detail6)= news_detailtext6
+            li
+              a(src=news_detail7)= news_detailtext7
+            li
+              a(src=news_detail8)= news_detailtext8
+            li
+              a(src=news_detail9)= news_detailtext9
+            li
+              a(src=news_detail10)= news_detailtext10
+      #movies
+        #nav-movies
+          //- 这里可以改成遍历
+          ul.nav
+            li
+              a(src=movies_src1)= movies_srctext1
+            li
+              a(src=movies_src2)= movies_srctext2
+            li
+              a(src=movies_src3)= movies_srctext3
+            li
+              a(src=movies_src4)= movies_srctext4
+            li
+              a(src=movies_src5)= movies_srctext5
+        #movies-images.images
+          //- 这里可以改成遍历
+          .imgbox
+            img(src=movies_img1)
+            p= movies_imgtext1
+          .imgbox
+            img(src=movies_img2)
+            p= movies_imgtext2
+          .imgbox
+            img(src=movies_img3)
+            p= movies_imgtext3
+          .imgbox
+            img(src=movies_img4)
+            p= movies_imgtext4
+          .imgbox
+            img(src=movies_img5)
+            p= movies_imgtext5
+          .imgbox
+            img(src=movies_img6)
+            p= movies_imgtext6
+          .slider_controls
+            a.top.news_icon
+            a.bottom.news_icon
+      #softs
+        #nav-softs
+          //- 这里可以改成遍历
+          ul.nav
+            li
+              a(src=softs_src1)= softs_srctext1
+            li
+              a(src=softs_src2)= softs_srctext2
+            li
+              a(src=softs_src3)= softs_srctext3
+            li
+              a(src=softs_src4)= softs_srctext4
+          //- 这里可以改成遍历 斑马线
+          ul.zebra.thr-list
+            li
+              p.thr-title= soft_title1
+              p.thr-size= soft_size1
+              a(src=soft_src1) 下载
+            li
+              p.thr-title= soft_title2
+              p.thr-size= soft_size2
+              a(src=soft_src2) 下载
+            li
+              p.thr-title= soft_title3
+              p.thr-size= soft_size3
+              a(src=soft_src3) 下载
+            li
+              p.thr-title= soft_title4
+              p.thr-size= soft_size4
+              a(src=soft_src4) 下载
+            li
+              p.thr-title= soft_title5
+              p.thr-size= soft_size5
+              a(src=soft_src5) 下载
+            li
+              p.thr-title= soft_title6
+              p.thr-size= soft_size6
+              a(src=soft_src6) 下载
+            li
+              p.thr-title= soft_title7
+              p.thr-size= soft_size7
+              a(src=soft_src7) 下载
+            li
+              p.thr-title= soft_title8
+              p.thr-size= soft_size8
+              a(src=soft_src8) 下载
+            .slider_controls
+              a.top.news_icon
+              a.bottom.news_icon
+
+    .content.right-side
+      #campus-nav
+        #nav-head
+          h1 校园导航
+          a(src="#") +展开
+        #nav-detail
+          //- 这里可以改成遍历 斑马线
+          ul
+            li >&nbsp;
+              a(src=nav_src1)= nav_text1
+            li >&nbsp;
+              a(src=nav_src2)= nav_text2
+            li >&nbsp;
+              a(src=nav_src3)= nav_text3
+            li >&nbsp;
+              a(src=nav_src4)= nav_text4
+            li >&nbsp;
+              a(src=nav_src5)= nav_text5
+            li >&nbsp;
+              a(src=nav_src6)= nav_text6
+            li >&nbsp;
+              a(src=nav_src7)= nav_text7
+            li >&nbsp;
+              a(src=nav_src8)= nav_text8
+            //- li >&nbsp;
+            //-   a(src=nav_src9)= nav_text9
+            //- li >&nbsp;
+            //-   a(src=nav_src10)= nav_text10
+            //- li >&nbsp;
+            //-   a(src=nav_src11)= nav_text11
+            //- li >&nbsp;
+            //-   a(src=nav_src12)= nav_text12
+      #team-notice
+        h1 42公告
+        ul
+          li
+            a(src=notice_src1)= notice_text1
+          li
+            a(src=notice_src2)= notice_text2
+          li
+            a(src=notice_src3)= notice_text3
+      #ad 
+        a(src=ad_src)
+          img(src=ad_img)
+block foot
+  footer
+    #footer-logo
+    #footer-intro
+      h1 关于我们
+      p= intro_text
+      #extension
+        ul
+          li
+            a(src=extension_src1)= extension_text1
+          li |&nbsp;&nbsp;
+            a(src=extension_src2)= extension_text2
+          li |&nbsp;&nbsp;
+            a(src=extension_src3)= extension_text3
+    #footer-contact
+      h1 联系我们
+      a(src=contact_src)= contact_text
+      h1 版权所有
+      p &copy;2003-2017 42Team. All right Reserved
