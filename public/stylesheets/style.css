@@ -1,36 +1,8 @@
-/*css初始化*/
-body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
-body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; }
-h1, h2, h3, h4, h5, h6{ font-size:100%; }
-address, cite, dfn, em, var { font-style:normal; }
-code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
-small{ font-size:12px; }
-ul, ol { list-style:none; }
-a { text-decoration:none; }
-a:hover { text-decoration:underline; }
-sup { vertical-align:text-top; }
-sub{ vertical-align:text-bottom; }
-legend { color:#000; }
-fieldset, img { border:0; }
-button, input, select, textarea { font-size:100%; }
-table { border-collapse:collapse; border-spacing:0; }
-/*初始化结束*/
+
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
-}
-/*共用样式开始*/
-ul.nav li{
-  margin: 5px 20px;
-  display: inline-block;
-}
-.slider_controls{
-  height: 0px;
-}
-/*共用样式结束*/
 /*动画效果开始*/
 @keyframes disappear{
   0% {opacity: 1;}
@@ -42,65 +14,16 @@ ul.nav li{
 }
 /*动画效果结束*/
 /*顶部样式开始*/
-nav{
-  background-color: rgb(29, 29, 29);
-  padding: 0 100px;
-  top: 0px;
-  height: 50px;
-  width: 100%;
+
+div.navbar-left{
+  margin-left: 25%;
 }
-nav ul li{
-  height: 40px;
-  line-height: 40px;
-  font-size: 16px;
-}
-nav div,nav ul{
-  display: inline-block;
-  height: 50px;
-  vertical-align: top;
-}
-#date{
-  margin-right:200px; 
-  float: right;
-  line-height: 50px;
-  color: rgb(143, 143, 143);
-}
+
 /*顶部样式结束*/
 
 /*头部滚动图开始*/
-#header-wrap{
+#carousel{
   background-color: black;
-}
-#viewbox{
-  margin: 0 auto;
-  height: 500px;
-  width: 800px;
-}
-a.prev{
-  left: 15%;
-  background-image: url('../images/prev.jpg');
-}
-a.head_icon{
-  position: absolute;
-  top: 30%;
-  display: inline-block;
-  height: 130px;
-  width: 80px;
-  text-align: left;
-}
-a.next{
-  right: 15%;
-  background-image: url('../images/next.jpg');
-}
-a.head_icon:hover{
-  transform: scale(1.1);
-}
-#viewbox img{
-  display: none;
-}
-#viewbox img:first-child{
-  display: block;
-  animation: disappear 2s;
 }
 /*头部滚动图结束*/
 

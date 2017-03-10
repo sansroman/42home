@@ -1,34 +1,35 @@
 extend layout
 block nav
-  nav
-    div
-        img(src='./images/bmzr.jpg')
-    ul.nav
-        li
-          a 校内导航
-        li
-          a 新闻社区
-        li
-          a 新媒体中心
-        li
-          a 淘淘
-        li
-          a 更多
-          span
-    #date
-        p= date
+  nav.navbar.navbar-default
+    div.navbar-header.navbar-left
+      ul.nav.navbar-nav
+        li: a(href='#') 校园导航
+        li: a(href='#') 新闻社区
+        li: a(href='#') 新媒体中心
+        li: a(href='#') 淘淘
+        li.dropdown: a.dropdown-toggle(data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false') 更多
+          span.caret
+          ul.dropdown-menu
+            li: a(href='#') 软件中心
+            li: a(href='#') 乐乐
+
 block content
-  #header-wrap
-    #viewbox
-      img.img-list(src="./images/pic1.jpg")
-      img.img-list(src="./images/pic2.jpg")
-      img.img-list(src="./images/pic3.jpg")
-      .slider-controls
-        a.prev.head_icon
-        a.next.head_icon
+  #carousel.container-fluid
+    .row
+      .col-md-8.col-md-offset-2
+        #carousel-container.carousel.slide(data-ride='carousel')
+          .carousel-inner
+            .item.active: img(src='images/wallpaper.jpg')
+            .item: img(src='images/wallpaper.jpg')
+          ol.carousel-indicators
+            li(data-slide-to='0' data-target='#carousel-container')
+            li(data-slide-to='1' data-target='#carousel-container')
+          a.left.carousel-control(data-slide='prev' href='#carousel-container'): span.glyphicon.glyphicon-chevron-left
+          a.right.carousel-control(data-slide='next' href='#carousel-container'): span.glyphicon.glyphicon-chevron-right
+
   section
     #note
-      img(src="./images/heart.jpg")
+      img(href="./images/heart.jpg")
       p= note
     .content.left-side
       #news-content
@@ -36,22 +37,22 @@ block content
           ul.nav
             //- 这里可以改成遍历
             li
-              a(src=news_src1)= news_srctext1
+              a(href=news_href1)= news_hreftext1
             li
-              a(src=news_src2)= news_srctext2
+              a(href=news_href2)= news_hreftext2
             li
-              a(src=news_src3)= news_srctext3
+              a(href=news_href3)= news_hreftext3
             li
-              a(src=news_src4)= news_srctext4
+              a(href=news_href4)= news_hreftext4
         #news-images.images
           .imgbox
-            img(src=news_img1)
+            img(href=news_img1)
             p= news_imgtext1
           .imgbox
-            img(src=news_img2)
+            img(href=news_img2)
             p= news_imgtext2
           .imgbox
-            img(src=news_img3)
+            img(href=news_img3)
             p= news_imgtext3
           .slider_controls
             a.top.news_icon
@@ -60,58 +61,58 @@ block content
           //- 这里可以改成遍历
           ul
             li
-              a(src=news_detail1)= news_detailtext1
+              a(href=news_detail1)= news_detailtext1
             li
-              a(src=news_detail2)= news_detailtext2
+              a(href=news_detail2)= news_detailtext2
             li
-              a(src=news_detail3)= news_detailtext3
+              a(href=news_detail3)= news_detailtext3
             li
-              a(src=news_detail4)= news_detailtext4
+              a(href=news_detail4)= news_detailtext4
             li
-              a(src=news_detail5)= news_detailtext5
+              a(href=news_detail5)= news_detailtext5
             li
-              a(src=news_detail6)= news_detailtext6
+              a(href=news_detail6)= news_detailtext6
             li
-              a(src=news_detail7)= news_detailtext7
+              a(href=news_detail7)= news_detailtext7
             li
-              a(src=news_detail8)= news_detailtext8
+              a(href=news_detail8)= news_detailtext8
             li
-              a(src=news_detail9)= news_detailtext9
+              a(href=news_detail9)= news_detailtext9
             li
-              a(src=news_detail10)= news_detailtext10
+              a(href=news_detail10)= news_detailtext10
       #movies
         #nav-movies
           //- 这里可以改成遍历
           ul.nav
             li
-              a(src=movies_src1)= movies_srctext1
+              a(href=movies_href1)= movies_hreftext1
             li
-              a(src=movies_src2)= movies_srctext2
+              a(href=movies_href2)= movies_hreftext2
             li
-              a(src=movies_src3)= movies_srctext3
+              a(href=movies_href3)= movies_hreftext3
             li
-              a(src=movies_src4)= movies_srctext4
+              a(href=movies_href4)= movies_hreftext4
             li
-              a(src=movies_src5)= movies_srctext5
+              a(href=movies_href5)= movies_hreftext5
         #movies-images.images
           //- 这里可以改成遍历
           .imgbox
-            img(src=movies_img1)
+            img(href=movies_img1)
             p= movies_imgtext1
           .imgbox
-            img(src=movies_img2)
+            img(href=movies_img2)
             p= movies_imgtext2
           .imgbox
-            img(src=movies_img3)
+            img(href=movies_img3)
             p= movies_imgtext3
           .imgbox
-            img(src=movies_img4)
+            img(href=movies_img4)
             p= movies_imgtext4
           .imgbox
-            img(src=movies_img5)
+            img(href=movies_img5)
             p= movies_imgtext5
           .imgbox
-            img(src=movies_img6)
+            img(href=movies_img6)
             p= movies_imgtext6
           .slider_controls
             a.top.news_icon
@@ -121,47 +122,47 @@ block content
           //- 这里可以改成遍历
           ul.nav
             li
-              a(src=softs_src1)= softs_srctext1
+              a(href=softs_href1)= softs_hreftext1
             li
-              a(src=softs_src2)= softs_srctext2
+              a(href=softs_href2)= softs_hreftext2
             li
-              a(src=softs_src3)= softs_srctext3
+              a(href=softs_href3)= softs_hreftext3
             li
-              a(src=softs_src4)= softs_srctext4
+              a(href=softs_href4)= softs_hreftext4
           //- 这里可以改成遍历 斑马线
           ul.zebra.thr-list
             li
               p.thr-title= soft_title1
               p.thr-size= soft_size1
-              a(src=soft_src1) 下载
+              a(href=soft_href1) 下载
             li
               p.thr-title= soft_title2
               p.thr-size= soft_size2
-              a(src=soft_src2) 下载
+              a(href=soft_href2) 下载
             li
               p.thr-title= soft_title3
               p.thr-size= soft_size3
-              a(src=soft_src3) 下载
+              a(href=soft_href3) 下载
             li
               p.thr-title= soft_title4
               p.thr-size= soft_size4
-              a(src=soft_src4) 下载
+              a(href=soft_href4) 下载
             li
               p.thr-title= soft_title5
               p.thr-size= soft_size5
-              a(src=soft_src5) 下载
+              a(href=soft_href5) 下载
             li
               p.thr-title= soft_title6
               p.thr-size= soft_size6
-              a(src=soft_src6) 下载
+              a(href=soft_href6) 下载
             li
               p.thr-title= soft_title7
               p.thr-size= soft_size7
-              a(src=soft_src7) 下载
+              a(href=soft_href7) 下载
             li
               p.thr-title= soft_title8
               p.thr-size= soft_size8
-              a(src=soft_src8) 下载
+              a(href=soft_href8) 下载
             .slider_controls
               a.top.news_icon
               a.bottom.news_icon
@@ -170,46 +171,46 @@ block content
       #campus-nav
         #nav-head
           h1 校园导航
-          a(src="#") +展开
+          a(href="#") +展开
         #nav-detail
           //- 这里可以改成遍历 斑马线
           ul
             li >&nbsp;
-              a(src=nav_src1)= nav_text1
+              a(href=nav_href1)= nav_text1
             li >&nbsp;
-              a(src=nav_src2)= nav_text2
+              a(href=nav_href2)= nav_text2
             li >&nbsp;
-              a(src=nav_src3)= nav_text3
+              a(href=nav_href3)= nav_text3
             li >&nbsp;
-              a(src=nav_src4)= nav_text4
+              a(href=nav_href4)= nav_text4
             li >&nbsp;
-              a(src=nav_src5)= nav_text5
+              a(href=nav_href5)= nav_text5
             li >&nbsp;
-              a(src=nav_src6)= nav_text6
+              a(href=nav_href6)= nav_text6
             li >&nbsp;
-              a(src=nav_src7)= nav_text7
+              a(href=nav_href7)= nav_text7
             li >&nbsp;
-              a(src=nav_src8)= nav_text8
+              a(href=nav_href8)= nav_text8
             //- li >&nbsp;
-            //-   a(src=nav_src9)= nav_text9
+            //-   a(href=nav_href9)= nav_text9
             //- li >&nbsp;
-            //-   a(src=nav_src10)= nav_text10
+            //-   a(href=nav_href10)= nav_text10
             //- li >&nbsp;
-            //-   a(src=nav_src11)= nav_text11
+            //-   a(href=nav_href11)= nav_text11
             //- li >&nbsp;
-            //-   a(src=nav_src12)= nav_text12
+            //-   a(href=nav_href12)= nav_text12
       #team-notice
         h1 42公告
         ul
           li
-            a(src=notice_src1)= notice_text1
+            a(href=notice_href1)= notice_text1
           li
-            a(src=notice_src2)= notice_text2
+            a(href=notice_href2)= notice_text2
           li
-            a(src=notice_src3)= notice_text3
+            a(href=notice_href3)= notice_text3
       #ad 
-        a(src=ad_src)
-          img(src=ad_img)
+        a(href=ad_href)
+          img(href=ad_img)
 block foot
   footer
     #footer-logo
@@ -219,13 +220,13 @@ block foot
       #extension
         ul
           li
-            a(src=extension_src1)= extension_text1
+            a(href=extension_href1)= extension_text1
           li |&nbsp;&nbsp;
-            a(src=extension_src2)= extension_text2
+            a(href=extension_href2)= extension_text2
           li |&nbsp;&nbsp;
-            a(src=extension_src3)= extension_text3
+            a(href=extension_href3)= extension_text3
     #footer-contact
       h1 联系我们
-      a(src=contact_src)= contact_text
+      a(href=contact_href)= contact_text
       h1 版权所有
       p &copy;2003-2017 42Team. All right Reserved

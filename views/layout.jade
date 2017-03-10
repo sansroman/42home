@@ -2,9 +2,13 @@ doctype html
 html
   head
     title= title
-    script(src='/javascripts/event.js')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width,initial-scale=1')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet',href='/bootstrap-3.3.7-dist/css/bootstrap.min.css')
   body
     block nav
     block content
     block foot
+    script(src='/javascripts/jquery.js')
+    script(src='/bootstrap-3.3.7-dist/js/bootstrap.min.js')
