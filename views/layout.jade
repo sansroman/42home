@@ -7,8 +7,8 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet',href='/bootstrap-3.3.7-dist/css/bootstrap.min.css')
   body
-    block nav
+    include includes/nav.jade
     block content
-    block foot
+    include includes/footer.jade
     script(src='/javascripts/jquery.js')
     script(src='/bootstrap-3.3.7-dist/js/bootstrap.min.js')

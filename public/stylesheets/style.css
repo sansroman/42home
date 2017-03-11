@@ -6,7 +6,7 @@ ul.nav-tabs>li>a{
   font-size: 20px;
 }
 .module-box{
-  margin: 10px -30px 0;
+  margin: 0 -30px;
 }
 
 .module-images>ul>li{
@@ -23,9 +23,23 @@ ul.nav-tabs>li>a{
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+.side-control>a{
+    display: block;
+}
+.side-control>a>span{
+  font-size: 40px;
+}
 /*模块共用部分 end*/
 
-
+/*改造bootstrap*/
+#accordion>button{
+  width: 100%;
+  text-align: left;
+}
+nav.navbar{
+  margin-bottom: 0;
+}
+/*改造bootstrap*/
 /*顶部样式开始*/
 
 
@@ -39,12 +53,13 @@ ul.nav-tabs>li>a{
 
 /*主题开始*/
 #note{
-  margin-top: 10px;
+  margin:10px 0;
   line-height: 30px;
   vertical-align: middle;
   background-color: limegreen;
   border-radius: 30px;
   height: 30px;
+
 }
 .icon-box{
   width: 5%;
@@ -65,14 +80,26 @@ ul.nav-tabs>li>a{
 .news-lists>div>ul{
   padding-left: 0;
 }
-.side-control>a{
-  display: block;
-  margin: 10px 0;
+#news .side-control>a{
+  margin: 30px 0;
 }
-.side-control>a>span{
-  font-size: 40px;
+
+#news .side-control{
+  position: relative;
+  top: 90px;
 }
 /*新闻模块结束*/
+
+/*新媒体模块开始*/
+#movies .side-control>a{
+  margin: 100px 0;
+}
+#movies .side-control{
+  position: relative;
+  top: 120px;
+}
+/*新媒体模块结束*/
+
 /*软件模块开始*/
 .softs-lists>div>a.list-group-item>p{
   width: 20%;
@@ -81,4 +108,44 @@ ul.nav-tabs>li>a{
   text-overflow: ellipsis;
   overflow: hidden;
 }
+#softs .side-control>a{
+  margin: 100px 0;
+}
+#softs .side-control{
+  position: relative;
+  top: 20px;
+}
 /*软件模块结束*/
+/*侧边导航模块*/
+#accordion .panel-body{
+  border:solid 1px red;
+  margin: 2px 0;
+  padding: 5px 10px;
+}
+#accordion .panel-body ul li{
+  margin: 5px 0;
+}
+
+/*侧边导航模块*/
+/*公告模块*/
+.notice a{
+  float: right;
+}
+/*公告模块*/
+/*页脚*/
+footer{
+  height: 180px;
+  background-color: grey;
+  padding: 20px 5px;
+}
+.v-line{
+  margin: 0 10px;
+}
+.contact>p{
+  display: inline-block;
+  margin-left:5px; 
+}
+.contact>h3{
+  margin: 10px 10px;
+}
+/*页脚*/

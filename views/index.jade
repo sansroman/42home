@@ -1,22 +1,4 @@
 extend layout
-block nav
-  nav.navbar.navbar-default
-    .container
-      .row
-        .col-md-12
-          .navbar-header
-            ul.nav.navbar-nav
-              li: a(href='#') 校园导航
-              li: a(href='#') 新闻社区
-              li: a(href='#') 新媒体中心
-              li: a(href='#') 淘淘
-              li.dropdown: a.dropdown-toggle(data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false') 更多
-                span.caret
-                ul.dropdown-menu
-                  li: a(href='#') 软件中心
-                  li: a(href='#') 乐乐
-            p.navbar-right.navbar-text 2016年12月4日 教学周：第2周
-
 block content
   #carousel
     .container
@@ -88,6 +70,9 @@ block content
                         li
                           a(href=''): img(src='images/img1.jpg')
                           a(href=''): h4 正在加载中......
+                .col-md-1.side-control
+                  a(href='#'): span.glyphicon.glyphicon-menu-up
+                  a(href='#'): span.glyphicon.glyphicon-menu-down
               #softs.module-box
                 .col-md-11
                   .softs-nav-box
@@ -101,3 +86,47 @@ block content
                       -for (var i=0;i<8;i++)
                         a.list-group-item(href='') 正在加载中...
                           p 大小：未知Mb
+                .col-md-1.side-control
+                  a(href='#'): span.glyphicon.glyphicon-menu-up
+                  a(href='#'): span.glyphicon.glyphicon-menu-down
+            .col-md-3
+              .sch-nav
+                #accordion.panel-group
+                    button.btn.btn-primary(type='button' data-toggle='collapse'  href='#hot-nav') 热门导航
+                    #hot-nav.panel-collapse.collapse.in
+                      .panel-body
+                        .col-md-6
+                          ul.list-unstyled
+                            li: a(href='#') >&nbsp;热门下载
+                            li: a(href='#') >&nbsp;设计类软件
+                            li: a(href='#') >&nbsp;开发类软件
+                            li: a(href='#') >&nbsp;更多
+                        .col-md-6
+                          ul.list-unstyled
+                            li: a(href='#') >&nbsp;热门下载
+                            li: a(href='#') >&nbsp;设计类软件
+                            li: a(href='#') >&nbsp;开发类软件
+                            li: a(href='#') >&nbsp;更多
+                    button.btn.btn-primary(type='button' data-toggle='collapse' href='#site-nav') 站内导航
+                    #site-nav.panel-collapse.collapse
+                      .panel-body
+                        .col-md-6
+                          ul.list-unstyled
+                            li: a(href='#') >&nbsp;热门下载
+                            li: a(href='#') >&nbsp;设计类软件
+                            li: a(href='#') >&nbsp;开发类软件
+                            li: a(href='#') >&nbsp;更多
+                        .col-md-6
+                          ul.list-unstyled
+                            li: a(href='#') >&nbsp;热门下载
+                            li: a(href='#') >&nbsp;设计类软件
+                            li: a(href='#') >&nbsp;开发类软件
+                            li: a(href='#') >&nbsp;更多
+               .notice
+                .panel.panel-primary
+                  .panel-heading 42公告
+                  .panel-body
+                    p 正在加载中...
+                    a(href='') more
+              #ad: img(src='images/ad.jpg')
+          
