@@ -1,23 +1,33 @@
-
+/*模块共用部分 start*/
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+ul.nav-tabs>li>a{
+  font-size: 20px;
+}
+.module-box{
+  margin: 10px -30px 0;
+}
 
-/*动画效果开始*/
-@keyframes disappear{
-  0% {opacity: 1;}
-  100%{opacity: 0;}
+.module-images>ul>li{
+  height: 33.333333%;
+  width: 33.333333%
 }
-@keyframes appear{
-  0% {opacity: 0;}
-  100%{opacity: 1;}
+.module-images>ul>li>a{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
 }
-/*动画效果结束*/
+.module-images>ul>li>a>h4{
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/*模块共用部分 end*/
+
+
 /*顶部样式开始*/
 
-div.navbar-left{
-  margin-left: 25%;
-}
 
 /*顶部样式结束*/
 
@@ -28,201 +38,47 @@ div.navbar-left{
 /*头部滚动图结束*/
 
 /*主题开始*/
-section{
-  width: 900px;
-  margin: 0 auto;
-}
 #note{
-  margin: 0 auto;
-  height: 30px;
-  text-align: center;
+  margin-top: 10px;
   line-height: 30px;
+  vertical-align: middle;
+  background-color: limegreen;
+  border-radius: 30px;
+  height: 30px;
 }
-#note p{
-  text-align: left;
-  width: 800px;
-  display: inline-block;
-  background-color: orange;
-  font-size: 18px;
-  border-radius: 20px;
-  padding-left:50px;
-}
-#note img{
-  position: relative;
-  left: 40px;
-  top: 5px;
-}
-
-.left-side{
+.icon-box{
+  width: 5%;
   float: left;
-  background-color: cornflowerblue;
-  width: 80%;
+  padding-left:3%; 
 }
-.left-side a{
+.content-box{
   display: inline-block;
-  color: gray;
-  font-size: 20px;
-  height: 100%;
+  padding: 0 20px;
+  margin:0 -20px;
+  width: 95%;
 }
-#nav-news{
-  padding: 10px;
+#note>span{
+  color: lightcoral;
 }
+/*新闻模块开始*/
 
-.imgbox{
-  text-align: center;
-  padding:5px 0; 
-  margin: 5px 0 5px 10px;
-  display: inline-block;
-  background-color: white;
-  height: 240px;
-  width: 210px;
+.news-lists>div>ul{
+  padding-left: 0;
 }
-.imgbox p{
+.side-control>a{
+  display: block;
   margin: 10px 0;
-  height: 16px;
-  font-size: 16px;
-  line-height: 16px;
 }
-.slider_controls{
-  padding-left: 670px;
+.side-control>a>span{
+  font-size: 40px;
 }
-a.news_icon{
-  position: relative;
-  bottom: 180px;
-  margin: 10px 0;
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-}
-a.top{
-  background-image: url(../images/top.jpg);
-}
-a.bottom{
-  background-image: url(../images/bottom.jpg);
-}
-#news-detail{
-  padding-right:60px; 
-}
-#news-detail li{
-  display: inline-block;
-  width: 310px;
-  margin: 5px 10px;
-}
-#news-detail li a{
-  width: 100%;
-  font-size: 14px;
-  color: black;
-}
-
-#movies-images .imgbox p{
-  text-indent: 10px;
-  text-align: left;
-  font-size: 20px;
-}
-#movies-images .slider_controls .news_icon{
-  bottom: 320px;
-}
-.thr-list li{
-  margin: 5px 0;
-}
-.thr-list li p{
-  display: inline-block;
-  margin: 0 20px;
-  height: 30px;
-  line-height: 30px;
-  font-size: 18px;
-}
-.thr-list li a{
-  margin-left:50px; 
-  color: black;
-  background-color: gray;
-  height: 30px;
-  width: 80px;
-  text-align: center;
-}
-.thr-title{
-  width:300px;
-}
-.thr-size{
-  width:150px;
-}
-#softs .slider_controls .news_icon{
-  bottom: 200px;
-}
-.right-side{
-  float: right;
-  background-color: orangered;
+/*新闻模块结束*/
+/*软件模块开始*/
+.softs-lists>div>a.list-group-item>p{
   width: 20%;
-}
-#nav-head{
-  height: 40px;
-  line-height: 40px;
-  margin:56px 0 10px 0;
-  background-color: orange;
-  padding: 0 10px;
-}
-#nav-head h1{
-  display: inline-block;
-  font-size: 20px;
-}
-#nav-head a{
   float: right;
-  height: 40px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-#nav-detail{
-  background-color: royalblue;
-}
-#nav-detail ul li{
-  display: inline-block;
-  margin: 5px 5%;
-  width: 40%;
-  height: 20px;
-}
-#team-notice{
-  padding: 10px 0;
-}
-#team-notice h1{
-  font-size: 20px;
-  height: 40px;
-  line-height: 40px;
-  padding: 0 10px;
-}
-#team-notice li{
-  padding:5px 10px;
-  
-}
-#ad a{
-  display: inline-block;
-}
-footer{
-  background-color: slateblue;
-  clear: both;
-}
-footer>div{
-  display: inline-block;
-  margin: 20px;
-  height: 120px;
-  vertical-align: top;
-}
-footer h1{
-  font-size: 20px;
-}
-#footer-logo{
-  width: 120px;
-  margin-left:10%; 
-}
-#footer-intro{
-  width: 500px;
-}
-#footer-intro p{
-  margin:20px 0;
-}
-#footer-intro li{
-  margin:0 5px;
-}
-#extension li{
-  display: inline-block;
-}
-#footer-contact p,#footer-contact h1{
-  margin: 10px 0;
-}
+/*软件模块结束*/

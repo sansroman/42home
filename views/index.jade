@@ -1,232 +1,103 @@
 extend layout
 block nav
   nav.navbar.navbar-default
-    div.navbar-header.navbar-left
-      ul.nav.navbar-nav
-        li: a(href='#') 校园导航
-        li: a(href='#') 新闻社区
-        li: a(href='#') 新媒体中心
-        li: a(href='#') 淘淘
-        li.dropdown: a.dropdown-toggle(data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false') 更多
-          span.caret
-          ul.dropdown-menu
-            li: a(href='#') 软件中心
-            li: a(href='#') 乐乐
+    .container
+      .row
+        .col-md-12
+          .navbar-header
+            ul.nav.navbar-nav
+              li: a(href='#') 校园导航
+              li: a(href='#') 新闻社区
+              li: a(href='#') 新媒体中心
+              li: a(href='#') 淘淘
+              li.dropdown: a.dropdown-toggle(data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false') 更多
+                span.caret
+                ul.dropdown-menu
+                  li: a(href='#') 软件中心
+                  li: a(href='#') 乐乐
+            p.navbar-right.navbar-text 2016年12月4日 教学周：第2周
 
 block content
-  #carousel.container-fluid
-    .row
-      .col-md-8.col-md-offset-2
-        #carousel-container.carousel.slide(data-ride='carousel')
-          .carousel-inner
-            .item.active: img(src='images/wallpaper.jpg')
-            .item: img(src='images/wallpaper.jpg')
-          ol.carousel-indicators
-            li(data-slide-to='0' data-target='#carousel-container')
-            li(data-slide-to='1' data-target='#carousel-container')
-          a.left.carousel-control(data-slide='prev' href='#carousel-container'): span.glyphicon.glyphicon-chevron-left
-          a.right.carousel-control(data-slide='next' href='#carousel-container'): span.glyphicon.glyphicon-chevron-right
+  #carousel
+    .container
+      .row
+        .col-md-12
+          #carousel-container.carousel.slide(data-ride='carousel')
+            .carousel-inner
+              .item.active: img(src='images/wallpaper.jpg')
+              .item: img(src='images/wallpaper.jpg')
+            ol.carousel-indicators
+              li(data-slide-to='0' data-target='#carousel-container')
+              li(data-slide-to='1' data-target='#carousel-container')
+            a.left.carousel-control(data-slide='prev' href='#carousel-container'): span.glyphicon.glyphicon-chevron-left
+            a.right.carousel-control(data-slide='next' href='#carousel-container'): span.glyphicon.glyphicon-chevron-right
 
   section
-    #note
-      img(href="./images/heart.jpg")
-      p= note
-    .content.left-side
-      #news-content
-        #nav-news
-          ul.nav
-            //- 这里可以改成遍历
-            li
-              a(href=news_href1)= news_hreftext1
-            li
-              a(href=news_href2)= news_hreftext2
-            li
-              a(href=news_href3)= news_hreftext3
-            li
-              a(href=news_href4)= news_hreftext4
-        #news-images.images
-          .imgbox
-            img(href=news_img1)
-            p= news_imgtext1
-          .imgbox
-            img(href=news_img2)
-            p= news_imgtext2
-          .imgbox
-            img(href=news_img3)
-            p= news_imgtext3
-          .slider_controls
-            a.top.news_icon
-            a.bottom.news_icon
-        #news-detail
-          //- 这里可以改成遍历
-          ul
-            li
-              a(href=news_detail1)= news_detailtext1
-            li
-              a(href=news_detail2)= news_detailtext2
-            li
-              a(href=news_detail3)= news_detailtext3
-            li
-              a(href=news_detail4)= news_detailtext4
-            li
-              a(href=news_detail5)= news_detailtext5
-            li
-              a(href=news_detail6)= news_detailtext6
-            li
-              a(href=news_detail7)= news_detailtext7
-            li
-              a(href=news_detail8)= news_detailtext8
-            li
-              a(href=news_detail9)= news_detailtext9
-            li
-              a(href=news_detail10)= news_detailtext10
-      #movies
-        #nav-movies
-          //- 这里可以改成遍历
-          ul.nav
-            li
-              a(href=movies_href1)= movies_hreftext1
-            li
-              a(href=movies_href2)= movies_hreftext2
-            li
-              a(href=movies_href3)= movies_hreftext3
-            li
-              a(href=movies_href4)= movies_hreftext4
-            li
-              a(href=movies_href5)= movies_hreftext5
-        #movies-images.images
-          //- 这里可以改成遍历
-          .imgbox
-            img(href=movies_img1)
-            p= movies_imgtext1
-          .imgbox
-            img(href=movies_img2)
-            p= movies_imgtext2
-          .imgbox
-            img(href=movies_img3)
-            p= movies_imgtext3
-          .imgbox
-            img(href=movies_img4)
-            p= movies_imgtext4
-          .imgbox
-            img(href=movies_img5)
-            p= movies_imgtext5
-          .imgbox
-            img(href=movies_img6)
-            p= movies_imgtext6
-          .slider_controls
-            a.top.news_icon
-            a.bottom.news_icon
-      #softs
-        #nav-softs
-          //- 这里可以改成遍历
-          ul.nav
-            li
-              a(href=softs_href1)= softs_hreftext1
-            li
-              a(href=softs_href2)= softs_hreftext2
-            li
-              a(href=softs_href3)= softs_hreftext3
-            li
-              a(href=softs_href4)= softs_hreftext4
-          //- 这里可以改成遍历 斑马线
-          ul.zebra.thr-list
-            li
-              p.thr-title= soft_title1
-              p.thr-size= soft_size1
-              a(href=soft_href1) 下载
-            li
-              p.thr-title= soft_title2
-              p.thr-size= soft_size2
-              a(href=soft_href2) 下载
-            li
-              p.thr-title= soft_title3
-              p.thr-size= soft_size3
-              a(href=soft_href3) 下载
-            li
-              p.thr-title= soft_title4
-              p.thr-size= soft_size4
-              a(href=soft_href4) 下载
-            li
-              p.thr-title= soft_title5
-              p.thr-size= soft_size5
-              a(href=soft_href5) 下载
-            li
-              p.thr-title= soft_title6
-              p.thr-size= soft_size6
-              a(href=soft_href6) 下载
-            li
-              p.thr-title= soft_title7
-              p.thr-size= soft_size7
-              a(href=soft_href7) 下载
-            li
-              p.thr-title= soft_title8
-              p.thr-size= soft_size8
-              a(href=soft_href8) 下载
-            .slider_controls
-              a.top.news_icon
-              a.bottom.news_icon
-
-    .content.right-side
-      #campus-nav
-        #nav-head
-          h1 校园导航
-          a(href="#") +展开
-        #nav-detail
-          //- 这里可以改成遍历 斑马线
-          ul
-            li >&nbsp;
-              a(href=nav_href1)= nav_text1
-            li >&nbsp;
-              a(href=nav_href2)= nav_text2
-            li >&nbsp;
-              a(href=nav_href3)= nav_text3
-            li >&nbsp;
-              a(href=nav_href4)= nav_text4
-            li >&nbsp;
-              a(href=nav_href5)= nav_text5
-            li >&nbsp;
-              a(href=nav_href6)= nav_text6
-            li >&nbsp;
-              a(href=nav_href7)= nav_text7
-            li >&nbsp;
-              a(href=nav_href8)= nav_text8
-            //- li >&nbsp;
-            //-   a(href=nav_href9)= nav_text9
-            //- li >&nbsp;
-            //-   a(href=nav_href10)= nav_text10
-            //- li >&nbsp;
-            //-   a(href=nav_href11)= nav_text11
-            //- li >&nbsp;
-            //-   a(href=nav_href12)= nav_text12
-      #team-notice
-        h1 42公告
-        ul
-          li
-            a(href=notice_href1)= notice_text1
-          li
-            a(href=notice_href2)= notice_text2
-          li
-            a(href=notice_href3)= notice_text3
-      #ad 
-        a(href=ad_href)
-          img(href=ad_img)
-block foot
-  footer
-    #footer-logo
-    #footer-intro
-      h1 关于我们
-      p= intro_text
-      #extension
-        ul
-          li
-            a(href=extension_href1)= extension_text1
-          li |&nbsp;&nbsp;
-            a(href=extension_href2)= extension_text2
-          li |&nbsp;&nbsp;
-            a(href=extension_href3)= extension_text3
-    #footer-contact
-      h1 联系我们
-      a(href=contact_href)= contact_text
-      h1 版权所有
-      p &copy;2003-2017 42Team. All right Reserved
+    .container
+      .row
+        .col-md-12
+          #note.row
+            .icon-box
+              span.glyphicon.glyphicon-heart
+            .content-box
+              //-这里我想让他滚动 
+              p 每日新闻:近日我校将举办大型春季运动会  
+          .row
+            .col-md-9
+              #news.module-box
+                .col-md-11
+                  .news-nav-box
+                    ul.nav.nav-tabs
+                      li.active: a(href='#') 学校公告
+                      li: a(href='#') 校园新鲜事
+                      li: a(href='#') 科技FUN
+                      li: a(href='#') 更多
+                  .news-content-box
+                    .news-images.module-images
+                      ul.list-inline
+                        -for (var i=0;i<3;i++)
+                          li
+                            a(href=''): img(src='images/img1.jpg')
+                            a(href=''): h4 正在加载中......
+                    .news-lists
+                      .col-md-6
+                        ul
+                          -for(var i=0;i<5;i++)
+                            li
+                              a(href='') 正在加载......
+                      .col-md-6
+                        ul
+                          -for(var i=0;i<5;i++)
+                            li
+                              a(href='') 正在加载......
+                .col-md-1.side-control
+                  a(href='#'): span.glyphicon.glyphicon-menu-up
+                  a(href='#'): span.glyphicon.glyphicon-menu-down
+              #movies.module-box
+                .col-md-11
+                  .movies-nav-box
+                    ul.nav.nav-tabs
+                      li.active: a(href='#') 近日更新
+                      li: a(href='#') 热门推荐
+                      li: a(href='#') 电影
+                      li: a(href='#') 动漫
+                      li: a(href='#') 更多
+                  .movies-lists.module-images
+                    ul.list-inline
+                      -for (var i=0;i<6;i++)
+                        li
+                          a(href=''): img(src='images/img1.jpg')
+                          a(href=''): h4 正在加载中......
+              #softs.module-box
+                .col-md-11
+                  .softs-nav-box
+                    ul.nav.nav-tabs
+                      li.active: a(href='#') 热门下载
+                      li: a(href='#') 设计类软件
+                      li: a(href='#') 开发类软件
+                      li: a(href='#') 更多
+                  .softs-lists
+                    .list-group.module-images
+                      -for (var i=0;i<8;i++)
+                        a.list-group-item(href='') 正在加载中...
+                          p 大小：未知Mb
