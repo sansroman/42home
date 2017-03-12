@@ -11,7 +11,7 @@ var Class = function (par) {
     *如果把parent传入Class构造函数,所有的子类则会必然共享一个原型
     *这里用临时匿名函数避免了继承类的时候创建实例,暗示只有实例的属性才会被继承,而不是类的属性
     */
-    if(parent){
+    if(par){
         var subclass = function(){};
         subclass.prototype = parent.prototype;
         klass.prototype = new subclass;
@@ -34,7 +34,7 @@ var Class = function (par) {
     }
 
     // 给实例也添加这个函数
-    klass.fn,proxy = klass.proxy;
+    klass.fn.proxy = klass.proxy;
 
     // 定义类别名
     klass.fn.parent = klass;

@@ -138,6 +138,11 @@ footer{
   background-color: grey;
   padding: 20px 5px;
 }
+.aboutme img{
+  display: inline-block;
+  width: 140px;
+  height: 140px;
+}
 .v-line{
   margin: 0 10px;
 }
