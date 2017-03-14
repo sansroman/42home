@@ -6,14 +6,12 @@ var movies_src = "pull/moviesload.json"
 
 
 var Load = new Class();
+
 Load.include({
-    src:'',
-    $elearray:[],
     getEle:function(elearray){
         for(var i=0;i<elearray.length;i++){
             this.$elearray.push($(elearray[i]));
         }
-        return this.$elearray;
     },
     getData:function($elearray,attrarray,callback){
         var self = this;
@@ -73,6 +71,6 @@ var newsload = new Load();
 var moviesload = new Load();
 
 $(function () {
-    moviesload.sendAjax(news_src,news_elearray,["img","a","text"]);
+    newsload.sendAjax(news_src,news_elearray,["img","a","text"]);
     moviesload.sendAjax(movies_src,movies_elearray,["img","text"]);
 });
