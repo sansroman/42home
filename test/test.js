@@ -1,9 +1,3 @@
-// var http = require('http');
-// http.get('http://www.wapage.com/site-58db8825b41f98027ced4a69/index.html',(res)=> {
-//     console.log('success');
-// }).on('error',(e)=>{
-//     console.error('got error : ${e.message}');
-// })
 var http = require('http');
 var uuid = require('node-uuid');
 var sha1 = require('sha1');
@@ -25,7 +19,7 @@ setInterval(function () {
     console.log(datenum);
     setTimeout(flashpage(),datenum);
 
-}, 100000);
+}, 10000);
 
 function flashpage(){
     count = count + 1;
