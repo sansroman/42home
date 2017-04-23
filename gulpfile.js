@@ -19,7 +19,7 @@ gulp.task('server',["node"],function (){
         'views/**/*.*',
         'public/**/*.*'
     ];
-    //gulp.run(["node"]);
+    gulp.run(["node"]);
     browserSync.init(files,{
         proxy:'http://localhost:3000',
         browser:'chrome',

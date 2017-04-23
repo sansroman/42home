@@ -7,7 +7,7 @@ block content
           #carousel-container.carousel.slide(data-ride='carousel')
             .carousel-inner
               .item.active: img(src='images/wallpaper.jpg')
-              .item: img(src='images/wallpaper.jpg')
+              .item: img(src='images/wallpaper2.jpg')
             ol.carousel-indicators
               li(data-slide-to='0' data-target='#carousel-container')
               li(data-slide-to='1' data-target='#carousel-container')
@@ -52,7 +52,7 @@ block content
                           -for(var i=0;i<5;i++)
                             li
                               a(href='') 正在加载......
-                .col-md-1.side-control
+                .col-md-1.side-control(data-area='news')
                   a(href='#'): span.glyphicon.glyphicon-menu-up
                   a(href='#'): span.glyphicon.glyphicon-menu-down
               #movies.module-box
@@ -70,7 +70,7 @@ block content
                         li
                           a(href=''): img(src='images/img1.jpg')
                           a(href=''): h4 正在加载中......
-                .col-md-1.side-control
+                .col-md-1.side-control(data-area='movies')
                   a(href='#'): span.glyphicon.glyphicon-menu-up
                   a(href='#'): span.glyphicon.glyphicon-menu-down
               #softs.module-box
@@ -84,9 +84,13 @@ block content
                   .softs-lists
                     .list-group.module-images
                       -for (var i=0;i<8;i++)
-                        a.list-group-item(href='') 正在加载中...
-                          p 大小：未知Mb
-                .col-md-1.side-control
+                        a.list-group-item(href='') #{i+1}.
+                          p.softText  正在加载中...
+                          p.softSize
+                            |大小：
+                            span 未知
+                            |Mb
+                .col-md-1.side-control(data-area='softs')
                   a(href='#'): span.glyphicon.glyphicon-menu-up
                   a(href='#'): span.glyphicon.glyphicon-menu-down
             .col-md-3

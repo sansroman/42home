@@ -19,6 +19,7 @@ ul.nav-tabs>li>a{
   height: 100%;
 }
 .module-images>ul>li>a>h4{
+  margin-right: 10px;
   overflow:hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -28,6 +29,9 @@ ul.nav-tabs>li>a{
 }
 .side-control>a>span{
   font-size: 40px;
+}
+.disenable{
+  color: gray;
 }
 /*模块共用部分 end*/
 
@@ -101,7 +105,7 @@ nav.navbar{
 /*新媒体模块结束*/
 
 /*软件模块开始*/
-.softs-lists>div>a.list-group-item>p{
+.softs-lists>div>a.list-group-item .softSize{
   width: 20%;
   float: right;
   white-space: nowrap;
@@ -115,6 +119,11 @@ nav.navbar{
   position: relative;
   top: 20px;
 }
+.softText{
+  float: none;
+  display: inline;
+}
+
 /*软件模块结束*/
 /*侧边导航模块*/
 #accordion .panel-body{
@@ -152,5 +161,10 @@ footer{
 }
 .contact>h3{
   margin: 10px 10px;
+}
+canvas{
+  position: absolute;
+  bottom: 50px;
+  left: 200px;
 }
 /*页脚*/
