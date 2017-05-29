@@ -1,0 +1,22 @@
+extends layout
+block head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    link(rel="stylesheet" href="/stylesheets/pure.css")
+    link(rel="stylesheet" href="/stylesheets/login.css")
+block content
+    .login-box
+        form.pure-form.pure-form-aligned
+            fieldset
+                .pure-control-group.alert
+                    label.alert-label test
+                .pure-control-group
+                    label(for="name") Username
+                    input#username(type="text" placeholder="Username")
+                .pure-control-group
+                    label(for="name") Password
+                    input#password(type="password" placeholder="password")
+                .pure-controls
+                    button.pure-button.pure-button-primary
+    script(src="/javascripts/libs.js")
