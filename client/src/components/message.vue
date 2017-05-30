@@ -1,9 +1,9 @@
 <template>
-    <div>
+    <div class="message">
         <el-card class="box-card">
-                <p>{{title}}</p>
+                <h4>{{title}}</h4>
                 <p v-bind:class="textColor">{{todayCount}}</p>
-                <i v-bind:class="arrow"></i>
+                <i v-bind:class="[arrow,textColor]"></i>
                 <p class="text-inline">环比:{{MoM}}%</p>
         </el-card>
     </div>

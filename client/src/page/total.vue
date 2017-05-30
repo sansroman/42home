@@ -1,6 +1,9 @@
 <template>
     <div>
         <message></message>
+        <message></message>
+        <message></message>
+        <echarts></echarts>
     </div>
 </template>
 <script>
@@ -19,19 +22,9 @@ export default {
 }
 </script>
 <style>
-    .box-card{
-        width:160px;
-    }
-    .box-card p{
-        margin:10px;
-    }
-    .red{
-        color:#FF4949;
-    }
-    .green{
-        color:#13CE66;
-    }
-    .text-inline{
-        display:inline-block;
-    }
+   .message{
+       text-align:center;
+       display:inline-block;
+       margin:10px 20px;
+   }
 </style>

@@ -92,7 +92,7 @@ function randomData() {
 		return {
 				name: now.toString(),
 				value: [
-						[now.getFullYear(), now(this.todayCount-this.yesterdayCount)/this.yesterdayCount.getMonth() + 1, now.getDate()].join('/'),
+						[now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'),
 						Math.round(value)
 				]
 		}

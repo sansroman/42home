@@ -5,9 +5,6 @@ var Dao = require('../middleware/Dao')
 router.get('/', function(req, res, next) {
   res.render('login');
 });
-router.post('/', (req, res, next) => {
-  next()
-  // res.render('login');  
-}, Dao.Oauth)
+router.post('/',Dao.Oauth)
 
 module.exports = router;

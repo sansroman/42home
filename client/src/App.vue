@@ -38,7 +38,7 @@ export default {
 }
 </script>
 
-<style>
+<style >
 body{
   padding:0;
   margin:0;
@@ -67,5 +67,7 @@ body{
   background-color: #fff;
   padding: 50px 70px; 
 }
-
+.view{
+  text-align:left;
+}
 </style>
