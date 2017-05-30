@@ -1,17 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-router.all('/', (req, res, next) => {
-	console.log(req.cookies)
-	if(req.cookies)
-		res.redirect("admin/login");
-})
+
 router.get('/', (req, res, next) => {
 	res.render('admin');
-})
-
-router.get('/login', (req, res, next) => {
-	res.render('login');
 })
 
 
@@ -100,7 +92,7 @@ function randomData() {
 		return {
 				name: now.toString(),
 				value: [
-						[now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'),
+						[now.getFullYear(), now(this.todayCount-this.yesterdayCount)/this.yesterdayCount.getMonth() + 1, now.getDate()].join('/'),
 						Math.round(value)
 				]
 		}

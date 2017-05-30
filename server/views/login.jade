@@ -7,16 +7,16 @@ block head
     link(rel="stylesheet" href="/stylesheets/login.css")
 block content
     .login-box
-        form.pure-form.pure-form-aligned
+        form.pure-form.pure-form-aligned(action="/login" method="post")
             fieldset
                 .pure-control-group.alert
                     label.alert-label test
                 .pure-control-group
                     label(for="name") Username
-                    input#username(type="text" placeholder="Username")
+                    input#username(type="text" name="username" placeholder="Username" required)
                 .pure-control-group
                     label(for="name") Password
-                    input#password(type="password" placeholder="password")
+                    input#password(type="password" name="password" placeholder="password" required)
                 .pure-controls
-                    button.pure-button.pure-button-primary
+                    button.pure-button.pure-button-primary Submit
     script(src="/javascripts/libs.js")
