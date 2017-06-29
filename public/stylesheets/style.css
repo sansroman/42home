@@ -1,0 +1,170 @@
+/*模块共用部分 start*/
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+ul.nav-tabs>li>a{
+  font-size: 20px;
+}
+.module-box{
+  margin: 0 -30px;
+}
+
+.module-images>ul>li{
+  height: 33.333333%;
+  width: 33.333333%
+}
+.module-images>ul>li>a{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.module-images>ul>li>a>h4{
+  margin-right: 10px;
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.side-control>a{
+    display: block;
+}
+.side-control>a>span{
+  font-size: 40px;
+}
+.disenable{
+  color: gray;
+}
+/*模块共用部分 end*/
+
+/*改造bootstrap*/
+#accordion>button{
+  width: 100%;
+  text-align: left;
+}
+nav.navbar{
+  margin-bottom: 0;
+}
+/*改造bootstrap*/
+/*顶部样式开始*/
+
+
+/*顶部样式结束*/
+
+/*头部滚动图开始*/
+#carousel{
+  background-color: black;
+}
+/*头部滚动图结束*/
+
+/*主题开始*/
+#note{
+  margin:10px 0;
+  line-height: 30px;
+  vertical-align: middle;
+  background-color: limegreen;
+  border-radius: 30px;
+  height: 30px;
+
+}
+.icon-box{
+  width: 5%;
+  float: left;
+  padding-left:3%; 
+}
+.content-box{
+  display: inline-block;
+  padding: 0 20px;
+  margin:0 -20px;
+  width: 95%;
+}
+#note>span{
+  color: lightcoral;
+}
+/*新闻模块开始*/
+
+.news-lists>div>ul{
+  padding-left: 0;
+}
+#news .side-control>a{
+  margin: 30px 0;
+}
+
+#news .side-control{
+  position: relative;
+  top: 90px;
+}
+/*新闻模块结束*/
+
+/*新媒体模块开始*/
+#movies .side-control>a{
+  margin: 100px 0;
+}
+#movies .side-control{
+  position: relative;
+  top: 120px;
+}
+/*新媒体模块结束*/
+
+/*软件模块开始*/
+.softs-lists>div>a.list-group-item .softSize{
+  width: 20%;
+  float: right;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#softs .side-control>a{
+  margin: 100px 0;
+}
+#softs .side-control{
+  position: relative;
+  top: 20px;
+}
+.softText{
+  float: none;
+  display: inline;
+}
+
+/*软件模块结束*/
+/*侧边导航模块*/
+#accordion .panel-body{
+  border:solid 1px red;
+  margin: 2px 0;
+  padding: 5px 10px;
+}
+#accordion .panel-body ul li{
+  margin: 5px 0;
+}
+
+/*侧边导航模块*/
+/*公告模块*/
+.notice a{
+  float: right;
+}
+/*公告模块*/
+/*页脚*/
+footer{
+  height: 180px;
+  background-color: grey;
+  padding: 20px 5px;
+}
+.aboutme img{
+  display: inline-block;
+  width: 140px;
+  height: 140px;
+}
+.v-line{
+  margin: 0 10px;
+}
+.contact>p{
+  display: inline-block;
+  margin-left:5px; 
+}
+.contact>h3{
+  margin: 10px 10px;
+}
+canvas{
+  position: absolute;
+  bottom: 50px;
+  left: 200px;
+}
+/*页脚*/
