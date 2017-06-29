@@ -1,10 +1,17 @@
 var express = require('express');
 var router = express.Router();
+var Oauth = require('../middleware/Dao').Oauth
 
 
-router.get('/', (req, res, next) => {
-	res.render('admin');
-})
+router
+	.get('/', (req, res, next) => {
+		console.log(req.session.Oauth)
+	if (req.session.Oauth == "2")
+		res.render('admin');
+	else
+		res.render('login');	
+	})
+	.post('/', Oauth)
 
 
 

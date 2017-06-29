@@ -1,23 +1,34 @@
-const loginBtn = document.querySelector("button");
-const username = document.querySelector("#username");
-const password = document.querySelector("#password");
-const loginUrl = "http://127.0.0.1:3000/login";
-let myHeaders = new Headers();
-let myInit = {
-    method: 'POST',
-    headers: myHeaders,
-    mode: 'cors',
-    cache:'default'
-}
-loginBtn.addEventListener("click", (e) => {
-    let form = new FormData();
-    form.append("username", username.value)
-    form.append("password", password.value)
-    myInit.body = form;
-    fetch(loginUrl, myInit).then((res) => {
-        return res.json()
-    }).then((json) => {
-        console.log(json)
+window.onload = function () {
+    const loginBtn = document.querySelector("button");
+    const username = document.querySelector("#username");
+    const password = document.querySelector("#password");
+    const loginUrl = "http://127.0.0.1:3000/admin";
+    const alert = document.querySelector('.alert-label');
+    loginBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+        var userInfo = initUser(username.value, password.value)
+        if (username.value == '' || password.value == '') {
+            alert.textContent = "username or password can not empty."
+            alert.removeAttribute('hidden')
+        } else {
+            var userInfo = initUser(username.value, password.value)
+            ajax.post(loginUrl, userInfo, function (ajaxObj) {
+                if (ajaxObj.err) {
+                    alert.textContent = ajaxObj.context;
+                    alert.removeAttribute('hidden');
+                } else {
+                    window.location = loginUrl;
+                }
+            })
+        }
+        return false;
     })
-    e.preventDefault();
-})
+}
+
+function initUser(username, password) {
+    var userObj = {
+        username: username,
+        password: password
+    }
+    return JSON.stringify(userObj);
+}

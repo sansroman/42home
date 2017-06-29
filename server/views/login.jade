@@ -7,10 +7,10 @@ block head
     link(rel="stylesheet" href="/stylesheets/login.css")
 block content
     .login-box
-        form.pure-form.pure-form-aligned(action="/login" method="post")
+        form.pure-form.pure-form-aligned
             fieldset
                 .pure-control-group.alert
-                    label.alert-label test
+                    label.alert-label(hidden)
                 .pure-control-group
                     label(for="name") Username
                     input#username(type="text" name="username" placeholder="Username" required)
@@ -20,3 +20,4 @@ block content
                 .pure-controls
                     button.pure-button.pure-button-primary Submit
     script(src="/javascripts/login.js")
+    script(src="/javascripts/libs.js")
