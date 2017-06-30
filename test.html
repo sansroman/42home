@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            /*background: linear-gradient(45deg, #fb3 25%, #58a 0, #58a 50%, #fb3 0, #fb3 75%, #58a 0);*/
+            /*background: linear-gradient(45deg, #fb3 25%, yellowgreen 0, yellowgreen 50%, #fb3 0, #fb3 75%, yellowgreen 0);*/
+            /*background-size: 30px 30px;*/
+        }
+        
+        div {
+            position: relative;
+            padding: 0 10px;
+            /*transform: skew(-45deg);*/
+            /*background: wheat;*/
+        }
+        
+        div::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            background: #58a;
+            transform: skew(-45deg);
+        }
+        /*p {
+            transform: skew(45deg)
+        }*/
+        
+        @keyframes ants {
+            to {
+                background-position: 100%
+            }
+        }
+    </style>
+</head>
+
+<div>
+    <p>hello</p>
+</div>
+
+
+</html>

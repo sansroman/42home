@@ -1,6 +1,6 @@
 # 42team
 
-> A Vue.js project
+> 42team website
 
 ## Build Setup
 
